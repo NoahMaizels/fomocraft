@@ -36,14 +36,10 @@ export default function Navbar(props) {
               <a className="navbar-item">Home</a>
             </Link> */}
         
-            <Link href="/mailto:fomocraft@gmail.com">
-              <a className="navbar-item">Email</a>
-            </Link>
-            <Link target="_blank" href="https://twitter.com/fomocraft">
-              <a className="navbar-social navbar-item">
-                Twitter
-              </a>
-            </Link>
+            <a target="_blank" href="mailto:fomocraft@gmail.com" className="navbar-item">Email</a>
+            <a target="_blank" href="https://twitter.com/fomocraft" className="navbar-item">
+              Twitter
+            </a>
              
           </div>
         </div>
