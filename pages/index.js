@@ -86,7 +86,7 @@ export default function Home() {
           width: 45%;
           margin: auto;
           min-width: 300px;
-          backdrop-filter: blur(50px);
+          backdrop-filter: blur(5px);
           padding: 25px;
           border-radius: 40px;
           border: 2px solid white;
