@@ -41,7 +41,7 @@ export default function Navbar(props) {
             </Link>
             <Link target="_blank" href="https://twitter.com/fomocraft">
               <a className="navbar-social navbar-item">
-                <img className="twitter" src='twitter.svg'></img>
+                Twitter
               </a>
             </Link>
              

@@ -84,7 +84,7 @@ export default function Home() {
           text-align: center;
         }
         .main_container {
-          top: 25%;
+          top: 20%;
           width: 45%;
           margin: auto;
           min-width: 300px;
