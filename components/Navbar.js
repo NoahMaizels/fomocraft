@@ -83,7 +83,7 @@ export default function Navbar(props) {
               max-width: 900px;
             } 
             .navbar-item {
-              font-size: 16px;
+              font-size: 18px;
             }
             .navbar,.is-primary .navbar-brand .navbar-item {
               width: 100px;
@@ -109,7 +109,7 @@ export default function Navbar(props) {
               margin: auto;
             }
             .navbar-item {
-              font-size: 20px;
+              font-size: 18px;
             }
           }
   
@@ -159,7 +159,7 @@ export default function Navbar(props) {
               margin: 0 auto;
             }
             .navbar-item {
-              font-size: 17px;
+              font-size: 18px;
             }
             .navbar-item img {
               width: 340px;
