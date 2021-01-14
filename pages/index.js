@@ -1,65 +1,107 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
 
+import Navbar from '../components/Navbar'
+// import styles from '../styles/Home.module.css'
+import {useEffect, useRef, useState} from 'react'
+// import BIRDS from '../node_modules/vanta/dist/vanta.birds.min.js'
+import BIRDS from '../node_modules/vanta/dist/vanta.birds.min.js'
+
+import * as THREE from 'three' 
 export default function Home() {
+  const [vantaEffect, setVantaEffect] = useState(0)
+  const vantaRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(BIRDS({
+        el: vantaRef.current,
+        backgroundColor: '#051A5E',
+        color1: '#76FFA3',
+        color2: '#025ECE',
+        THREE
+      }) ) 
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  })
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>FOMOcraft</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+    
+      <main className='main' ref={vantaRef}>
+        <Navbar></Navbar>
+        <div className="main_container">
+          <div className='main_image_container'>
+            <Image
+              className='main_title'
+              src="/logo1.png"
+              width={2206}
+              height={633}
+              layout="responsive"
+            />
+          </div>
+          <div className='main_message_container'>
+            <h2 className='main_sub_title'>Collaborating with #crypto startups to Blitz Launch their entrepreneurial dreams!</h2>
+            <Link href="/mailto:fomocraft@gmail.com">
+              <a>
+                <button className="get-in-touch button is-white">Get in touch</button>
+              </a>
+            </Link>
+          </div>
+        </div>    
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <style jsx>{`
+        .container {
+          min-height: 100vh;
+          padding: 0;
+          margin: 0;
+        }
+        .get-in-touch {
+          margin-top: 15px;
+        }
+        .main {
+          flex: 1;
+          height: 100vh;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          color: white;
+        }
+
+        .main_message_container {
+          margin: auto;
+          margin-top: 30px;
+          text-align: center;
+        }
+        .main_image_container {
+          margin: auto;
+          text-align: center;
+        }
+        .main_container {
+          top: 25%;
+          width: 45%;
+          margin: auto;
+          min-width: 300px;
+          backdrop-filter: blur(50px);
+          padding: 25px;
+          border-radius: 40px;
+          border: 2px solid white;
+        }
+        .main_title {
+
+        }
+
+        .main_subtitle {
+
+        }
+        
+      `}</style>
     </div>
   )
 }

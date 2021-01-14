@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+ 
+// Set your brand colors
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Noto Sans', sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+$primary: rgba(0, 0, 0, 0);
+// $link: $pink;
+$danger: #9F66A9;
+$warning: #F1F1F2;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$card-radius: 500px !default;
+
+
+// Import Bulma
+@import '../node_modules/bulma/bulma.sass';
+
