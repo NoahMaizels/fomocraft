@@ -46,7 +46,7 @@ export default function Home() {
             />
           </div>
           <div className='main_message_container'>
-            <h2 className='main_sub_title'>Blitz Launch their crypto dream project!</h2>
+            <h2 className='main_sub_title'>Blitz Launch your crypto dream project!</h2>
             <a target="_blank" href="mailto:fomocraft@gmail.com">
               <button className="get-in-touch button is-white">Get in touch</button>
             </a>
