@@ -58,9 +58,9 @@ export default function Navbar(props) {
           0% {
             -webkit-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0.03);
           }
-          70% {
+          50% {
               -webkit-box-shadow: 0 0 0 15px rgba(118, 255, 163, 0);
-              transform: scale(1.05);
+              transform: scale(1.15);
           }
           100% {
               -webkit-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0);
@@ -71,10 +71,10 @@ export default function Navbar(props) {
             -moz-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0.03);
             box-shadow: 0 0 0 0 rgba(118, 255, 163, 0.03);
           }
-          70% {
+          50% {
               -moz-box-shadow: 0 0 0 15px rgba(118, 255, 163, 0);
               box-shadow: 0 0 0 15px rgba(118, 255, 163, 0);
-              transform: scale(1.05);
+              transform: scale(1.15);
 
           }
           100% {
