@@ -102,7 +102,7 @@ export default function Navbar(props) {
             .navbar-container {
               width: ${props.is_blog_main ? "100%" : "80%"};
               margin: auto;
-              margin-top: 25px;
+              padding-top: 25px;
               height: 70px;
               z-index: 10;
             }
@@ -116,6 +116,9 @@ export default function Navbar(props) {
    
             .navbar-item {
               font-size: 18px;
+              backdrop-filter: blur(2px);
+              border-radius: 100%;
+
             }
             {/* .navbar,.is-primary .navbar-brand .navbar-item {
               width: 100px;
