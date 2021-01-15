@@ -14,10 +14,8 @@ export default function Navbar(props) {
       <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <div className="navbar-item"  >
-            <a href="https://twitter.com/fomocraft" target="_blank" className="navbar-item logo"> <img className="pulse" src="/logo2.png" alt="FinNexus"  /></a>
-            
-            
-           </div>
+            <a href="https://twitter.com/fomocraft" target="_blank" className="navbar-item logo"> <img className="pulse" src="/logo2.png" alt="FinNexus"  /></a> 
+            </div>
             <a role="button" onClick={handleMenuClick} className={`navbar-burger  ${menu === 0 ? "" : "is-active"}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
               <span className="burger burger-1" aria-hidden="true"></span>
               <span className="burger burger-2" aria-hidden="true"></span>
@@ -37,7 +35,9 @@ export default function Navbar(props) {
             <a target="_blank" href="https://twitter.com/fomocraft" className="navbar-item">
               Twitter
             </a>
-             
+            <a target="_blank" href="https://t.me/fomocraft" className="navbar-item">
+              Telegram
+            </a>
           </div>
         </div>
       </nav>
