@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 
 
 export default function Navbar(props) {
@@ -15,9 +14,7 @@ export default function Navbar(props) {
       <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <div className="navbar-item"  >
-            <Link href="/">
-              <a className="navbar-item logo-item"> <img className="logo" src="/logo1.png" alt="FinNexus"  /></a>
-            </Link>
+            <a href="https://twitter.com/fomocraft" target="_blank" className="navbar-item logo"> <img className="pulse" src="/logo2.png" alt="FinNexus"  /></a>
             
             
            </div>
@@ -47,45 +44,80 @@ export default function Navbar(props) {
 
 
       <style jsx>{`
-            .twitter {
-              width: 30px;
-              height: 30px;
-            }
-            .navbar-social {
-              margin-right: 20px;
-            }
-            * {
-              overflow: visible;
-            } 
-            .selected {
-              text-decoration: underline;
-              font-weight: 700;
-            }
-            .navbar * {
-              z-index: 10;
-            }
+
+        .pulse {
+          display: block;
+          
+          border-radius: 100%;
+          
+          animation: pulse 2s infinite;
+        }
+
+
+        @-webkit-keyframes pulse {
+          0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0.03);
+          }
+          70% {
+              -webkit-box-shadow: 0 0 0 15px rgba(118, 255, 163, 0);
+              transform: scale(1.05);
+          }
+          100% {
+              -webkit-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0);
+          }
+        }
+        @keyframes pulse {
+          0% {
+            -moz-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0.03);
+            box-shadow: 0 0 0 0 rgba(118, 255, 163, 0.03);
+          }
+          70% {
+              -moz-box-shadow: 0 0 0 15px rgba(118, 255, 163, 0);
+              box-shadow: 0 0 0 15px rgba(118, 255, 163, 0);
+              transform: scale(1.05);
+
+          }
+          100% {
+              -moz-box-shadow: 0 0 0 0 rgba(118, 255, 163, 0);
+              box-shadow: 0 0 0 0 rgba(118, 255, 163, 0);
+          }
+        }
+        .twitter {
+          width: 30px;
+          height: 30px;
+        }
+        .navbar-social {
+          margin-right: 20px;
+        }
+        * {
+          overflow: visible;
+        } 
+        .selected {
+          text-decoration: underline;
+          font-weight: 700;
+        }
+        .navbar * {
+          z-index: 10;
+        }
             .navbar-container {
               width: ${props.is_blog_main ? "100%" : "80%"};
               margin: auto;
-              margin-top: 15px;
+              margin-top: 25px;
               height: 70px;
               z-index: 10;
-             }
-            .navbar-item img {
-              max-width: 200px;
-              max-height: 100px;
-              position: absolute;
             }
+            .logo {
+              transform: scale(2.5);
+;            }
+            
             .twitter {
               margin-right: 30px;
             }
-            .logo {
-              max-width: 900px;
-            } 
+   
             .navbar-item {
               font-size: 18px;
             }
-            .navbar,.is-primary .navbar-brand .navbar-item {
+            {/* .navbar,.is-primary .navbar-brand .navbar-item {
               width: 100px;
               height: 50px;
               margin: 0;
@@ -96,7 +128,7 @@ export default function Navbar(props) {
               height: 50px;
               margin: 0;
               padding: 0;
-            }
+            } */}
 
          
       
@@ -154,7 +186,9 @@ export default function Navbar(props) {
           }
 
           @media (max-width: 1024px) {
-            
+            .logo {
+              transform: scale(1.8);
+            }
             .navbar {
               margin: 0 auto;
             }
@@ -183,12 +217,9 @@ export default function Navbar(props) {
               top: -600px;
               pointer-events: none;
             }
-            .logo {
-              max-width: 400px;
-              margin-top: 0px;
-            }
+           
            }
-   
+        
       `}</style>
     </div>
     )}

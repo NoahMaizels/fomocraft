@@ -37,6 +37,7 @@ export default function Home() {
         <Navbar></Navbar>
         <div className="main_container">
           <div className='main_image_container'>
+            
             <Image
               className='main_title'
               src="/logo1.png"
@@ -55,6 +56,7 @@ export default function Home() {
       </main>
 
       <style jsx>{`
+
         .container {
           min-height: 100vh;
           padding: 0;
@@ -78,6 +80,8 @@ export default function Home() {
           text-align: center;
         }
         .main_image_container {
+          padding-left: 30px;
+          padding-right: 30px;
           margin: auto;
           text-align: center;
         }
@@ -92,11 +96,13 @@ export default function Home() {
           border: 2px solid white;
         }
         .main_title {
-
+          max-width: 500px;
         }
 
-        .main_subtitle {
-
+        @media (max-width: 1024px) {
+          .main_image_container {
+            padding: 0;
+          }
         }
         
       `}</style>
