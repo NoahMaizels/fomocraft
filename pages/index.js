@@ -17,9 +17,11 @@ export default function Home() {
       setVantaEffect(BIRDS({
         el: vantaRef.current,
         backgroundColor: '#051A5E',
+        backgroundAlpha: 0,
         color1: '#76FFA3',
         color2: '#025ECE',
         THREE
+
       }) ) 
     }
     return () => {
@@ -56,7 +58,9 @@ export default function Home() {
       </main>
 
       <style jsx>{`
-
+        .main_sub_title {
+          color: white;
+        }
         .container {
           min-height: 100vh;
           padding: 0;
@@ -70,8 +74,8 @@ export default function Home() {
           height: 100vh;
           justify-content: center;
           align-items: center;
-          background-color: black;
-          color: white;
+          background: rgb(60,78,121);
+background: linear-gradient(21deg, rgba(60,78,121,1) 0%, rgba(33,52,108,1) 14%, rgba(5,26,94,1) 43%);
         }
 
         .main_message_container {
