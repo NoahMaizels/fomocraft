@@ -1,33 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import Navbar from '../components/Navbar'
-// import styles from '../styles/Home.module.css'
-import {useEffect, useRef, useState} from 'react'
-// import BIRDS from '../node_modules/vanta/dist/vanta.birds.min.js'
-import BIRDS from '../node_modules/vanta/dist/vanta.birds.min.js'
-
-import * as THREE from 'three' 
-export default function Home() {
-  const [vantaEffect, setVantaEffect] = useState(0)
-  const vantaRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(BIRDS({
-        el: vantaRef.current,
-        backgroundColor: '#051A5E',
-        backgroundAlpha: 0,
-        color1: '#76FFA3',
-        color2: '#025ECE',
-        THREE
-
-      }) ) 
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  })
+    
+ export default function Home() {
   return (
     <div>
       <Head>
@@ -35,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     
-      <main className='main' ref={vantaRef}>
+      <main>
         <Navbar></Navbar>
         <div className="main_container">
           <div className='main_image_container'>
@@ -75,7 +51,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;
           background: rgb(60,78,121);
-background: linear-gradient(21deg, rgba(60,78,121,1) 0%, rgba(33,52,108,1) 14%, rgba(5,26,94,1) 43%);
+          background: linear-gradient(21deg, rgba(60,78,121,1) 0%, rgba(33,52,108,1) 14%, rgba(5,26,94,1) 43%);
         }
 
         .main_message_container {
